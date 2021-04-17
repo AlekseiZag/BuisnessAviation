@@ -12,10 +12,14 @@ $bg: #3F4458;
 //     font-family: 'Roboto', sans-serif;
 //     font-weight: 300;
 //   }
-// @mixin f400 {
-//     font-family: "Roboto", sans-serif;
-//     font-weight: 400;
-// }
+@mixin f400 {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+}
+@mixin f700 {
+    font-family: "Garamond Bold", arial;
+    font-weight: 700;
+}
 
 // @mixin f500 {
 //     font-family: "Roboto", sans-serif;
@@ -25,3 +29,5 @@ $bg: #3F4458;
 //     font-family: "Roboto", sans-serif;
 //     font-weight: 700;
 // }
+
+

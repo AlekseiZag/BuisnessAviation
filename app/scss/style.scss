@@ -39,6 +39,12 @@ li {
     padding: 0 10px;
     overflow: hidden;
 }
+.container__fluid {
+    max-width: 835px;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
 
 .header {
     background: #3f4458;
@@ -98,7 +104,8 @@ li {
     color: #f1c884 !important;
 }
 
-#bg {
+#bg,
+.bg {
     min-height: 594px;
     /* min-height: 690px; */
     background-image: url(../images/top-bg-3.svg);
@@ -106,12 +113,16 @@ li {
     background-position: top;
     background-repeat: no-repeat;
 }
-
+.bg-about {
+    background-image: url(../images/about.jpg);
+}
+.bg-services {
+    background-image: url(../images/services/services-bg.jpg);
+}
 .top__title {
     margin: 0;
     padding: 105px 0px 0 105px;
-    font-family: "EB Garamond", serif;
-    font-weight: 400;
+    @include f400;
     font-size: 100px;
     line-height: 112px;
     color: $text;
@@ -815,13 +826,13 @@ p.services__paragraph-3 {
 .modal__wrapper {
     display: flex;
     justify-content: space-between;
+    height: 100%;
     .modal__booking {
         background-color: $bg;
         width: 50%;
-        padding: 35px 47px 38px;
         padding: 52px 60px 87px;
     }
-    .modal__booking-call{
+    .modal__booking-call {
         padding-bottom: 207px;
     }
 }
@@ -889,4 +900,241 @@ p.services__paragraph-3 {
     color: #fff;
 }
 //end modal
+
+//start about
+.top__text.top__text-about {
+    font-size: 25px;
+    max-width: 1090px;
+}
+.top__title-about {
+    font-size: 80px;
+}
+.history__title {
+    @include f400;
+    font-size: 60px;
+    color: $bg;
+    text-align: center;
+}
+.history__item {
+    display: flex;
+    flex-direction: column;
+}
+.history__items-line {
+    border-top: 3px solid $bg;
+    margin-bottom: 50px;
+    .circles {
+        display: flex;
+        justify-content: space-around;
+        overflow: visible;
+        div {
+            left: 440px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-top: -10px;
+            background-color: $text;
+            z-index: 2;
+            border: 2px solid $bg;
+        }
+    }
+}
+.history__items-top {
+    display: flex;
+    justify-content: space-around;
+    h3,
+    p {
+        margin-left: 73px;
+    }
+}
+.history__items-bottom {
+    display: flex;
+    justify-content: space-around;
+}
+.history {
+    color: $bg;
+    background-color: $text;
+    p {
+        max-width: 180px;
+        text-align: center;
+        font-weight: 250;
+        font-size: 18px;
+    }
+    h3 {
+        @include f700;
+        font-size: 40px;
+    }
+}
+//end about
+//start licenses
+.licenses {
+    background-color: $bg;
+    color: $text;
+    .licenses__title {
+        @include f400;
+        font-size: 60px;
+        margin-bottom: 17px;
+    }
+    .licenses__text {
+        font-size: 20px;
+        margin-bottom: 45px;
+        font-weight: 250;
+        max-width: 1030px;
+    }
+    .licenses__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .licenses__item {
+        filter: saturate(0);
+        width: 261px;
+        height: 360px;
+        background-size: cover;
+        position: relative;
+        background-repeat: no-repeat;
+        transition: 1s;
+        &:hover {
+            filter: saturate(1);
+            transform: scale(1.1);
+        }
+    }
+    .licenses__item-overlay {
+        background: rgba(63, 68, 88, 0.4);
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        &:hover {
+            opacity: 0;
+        }
+    }
+    hr {
+        margin-bottom: 27px;
+    }
+}
+//end licenses
+//start team
+.team {
+    background-color: $bg;
+    color: $text;
+    .team__title {
+        @include f400;
+        font-size: 60px;
+        color: $text;
+        margin: 0 0 50px;
+        text-align: center;
+    }
+    .team__top {
+        position: relative;
+    }
+
+    .team__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 48px;
+        .team__item-name {
+            font-weight: 300;
+            font-size: 24px;
+            margin: 0 0 1px;
+        }
+        .team__title-post {
+            font-weight: 250;
+            font-size: 14px;
+            margin: 0 0 20px;
+        }
+        .team_-title-text {
+            font-weight: 300;
+            font-size: 20px;
+        }
+    }
+    .team__item:nth-child(2n + 1) {
+        .team__item-content {
+            padding-left: 20px;
+        }
+    }
+    .team__item:nth-child(2n) {
+        .team__item-content {
+            padding-right: 20px;
+        }
+    }
+}
+.team__link,
+.partners__link {
+    color: $text;
+    font-size: 20px;
+    font-weight: 300;
+    top: 30px;
+    position: absolute;
+    right: 0;
+    border-bottom: 1px solid $text;
+}
+//end team
+
+//start partners
+.partners {
+    background-image: url(../images/partners/partners-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 506px;
+    color: $text;
+    .partners__top {
+        position: relative;
+    }
+    .partners__title {
+        @include f400;
+        font-size: 60px;
+        text-align: center;
+    }
+}
+//end partners
+//start services
+.services__top-text {
+    font-weight: 250;
+    font-size: 25px;
+    color: $text;
+    padding-left: 105px;
+    max-width: 1030px;
+}
+.services {
+    background-color: #e5e5e5;
+    max-height: 727px;
+    padding: 40px 0;
+}
+.services__items,
+.services__item-left-bottom,
+.services__item-right {
+    display: flex;
+    justify-content: space-between;
+}
+.img-wrap {
+    position: relative;
+    h6 {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        font-weight: 250;
+        font-size: 30px;
+        color: $text;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+}
+.services__item-left-top {
+    margin-bottom: 15px;
+}
+.services__item-long {
+    margin-right: 20px;
+    h6 {
+        top: 39%;
+    }
+}
+.services__item-short:nth-child(2) {
+    img {
+        margin-bottom: 15px;
+    }
+}
+//end services
+
 @import "media";
