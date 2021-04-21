@@ -34,8 +34,15 @@ $(function () {
                 }
             },
         ]
+    });
 
-
+    $('.slider-card').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        vertical: false,
+        speed: 500,
+        arrows: false,
+        dots: true,
     });
 
 
@@ -50,9 +57,36 @@ $(function () {
         focusOnSelect: true,
     });
 
+    // $('select').styler();
+
     $('.header-top__menu-btn').on('click', function () {
         $('.header-top__menu > ul').slideToggle();
     });
+
+    $('.icon-list').on('click', function () {
+        $('.fleet__item').addClass('list');
+        $('.icon-list').addClass('active');
+        $('.icon-large').removeClass('active');
+    });
+    $('.icon-large').on('click', function () {
+        $('.fleet__item').removeClass('list');
+        $('.icon-large').addClass('active');
+        $('.icon-list').removeClass('active');
+    });
+
+
+    $('.card__tabs .tab').on('click', function (event) {
+        var id = $(this).attr('data-id');
+        $('.card__tabs').find('.tab__item').removeClass('active-tab').hide();
+        $('.card__tabs .tabs').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
+
+
+
 });
 document.addEventListener("DOMContentLoaded", function () {
     let phoneInputs = document.querySelectorAll('input[data-tel-input]')
@@ -133,3 +167,47 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+const filterBox = document.querySelectorAll('.fleet__item');
+
+document.getElementById('range').addEventListener('change', function () {
+
+    let filterClass = this.value
+
+    filterBox.forEach(elem => {
+        elem.classList.remove('hide');
+        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+            elem.classList.add('hide');
+        }
+    });
+});
+
+document.getElementById('passengers').addEventListener('change', function () {
+
+    let filterClass = this.value
+
+    filterBox.forEach(elem => {
+        elem.classList.remove('hide-p');
+        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+            elem.classList.add('hide-p');
+        }
+    });
+});
+
+
+
+
+// document.querySelector('jq-selectbox__dropdown').addEventListener('click', (event) => {
+
+//     if (event.target.tagName !== 'LI') return false;
+//     let filterClass = event.target.dataset['f'];
+
+//     filterBox.forEach(elem => {
+//         elem.classList.remove('hide');
+//         if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+//             elem.classList.add('hide');
+//         }
+//     });
+
+// });
+
