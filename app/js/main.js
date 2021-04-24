@@ -193,6 +193,17 @@ document.getElementById('passengers').addEventListener('change', function () {
         }
     });
 });
+document.getElementById('purpose').addEventListener('change', function () {
+
+    let filterClass = this.value
+
+    filterBox.forEach(elem => {
+        elem.classList.remove('hide-purpose');
+        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+            elem.classList.add('hide-purpose');
+        }
+    });
+});
 
 
 

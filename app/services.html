@@ -26,7 +26,8 @@
                         <li class="header__menu-item-2"><a href="services.html"><span>Услуги</span></a></li>
                         <li class="header__menu-item-3"><a href="fleet.html">Наш авиапарк</a></li>
                         <li class="header__menu-item-4"><a href="#">О чартерах</a></li>
-                        <li class="header__menu-item-5"><a href="#">Бронирование</a></li>
+                        <li class="header__menu-item-5"><a data-fancybox data-src="#modal-booking"
+                                href="javascript:;">Бронирование</a></li>
                         <li class="header__menu-item-6"><a href="#">Контакты</a></li>
                         <li class="header__menu-item-7"><a href="tel:88001301532">8 (800) 130-15-32</a></li>
                     </ul>
@@ -52,15 +53,17 @@
                             <li class="header-top__menu-item-2"><a href="services.html">Услуги</a></li>
                             <li class="header-top__menu-item-3"><a href="fleet.html">Наш авиапарк</a></li>
                             <li class="header-top__menu-item-4"><a href="#">О чартерах</a></li>
-                            <li class="header-top__menu-item-5"><a href="#">Бронирование</a></li>
+                            <li class="header-top__menu-item-5"><a data-fancybox data-src="#modal-booking"
+                                    href="javascript:;">Бронирование</a></li>
                             <li class="header-top__menu-item-6"><a href="#">Контакты</a></li>
                             <li class="header-top__menu-item-7"><a href="tel:88001301532">8 (800) 130-15-32</a></li>
                         </ul>
                     </nav>
                 </div>
-                <h1 class="top__title">Услуги</h1>
+                <h1 class="top__title top__title-services">Услуги</h1>
                 <p class="services__top-text">
-                    Наша задача — не просто организовать частный перелет, а помочь клиенту в решении конкретных проблем. <br>
+                    Наша задача — не просто организовать частный перелет, а помочь клиенту в решении конкретных проблем.
+                    <br>
                     Вы можете заказать аренду самолета с особыми условиями — например, медицинским сопровождением
                     больного.
                     Мы организуем чартер в течение нескольких часов после подачи заявки.
@@ -195,7 +198,7 @@
                     <form action="">
                         <div class="modal__form-row">
                             <input type="text" placeholder="Куда">
-                            <input type="text" placeholder="Когда">
+                            <input type="date" placeholder="Когда">
                             <input type="text" placeholder="Количество пассажиров">
                             <input type="text" placeholder="ФИО*" required>
                             <input type="tel" data-tel-input placeholder="Телефон*" maxlength="18" required>
