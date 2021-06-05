@@ -1,0 +1,214 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛюксАвиа</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://allfont.ru/allfont.css?fonts=garamond-bold" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.cdnfonts.com/css/museo-sans-cyrl" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+</head>
+
+{% url 'about' as about %}
+{% url 'services' as services %}
+{% url 'fleet' as fleet %}
+{% url 'contacts' as contacts %}
+{% url 'card' as card %}
+
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="/"><img src="{% static 'images/logo.svg' %}" alt="Самолет"></a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li class="header__menu-item-1"><a href="{% url 'about' %}">{% if request.path == about %}
+                        <span>О компании</span>{% else %}О компании{% endif %}</a></li>
+                    <li class="header__menu-item-2"><a href="{% url 'services' %}">{% if request.path == services %}
+                        <span>Услуги</span>{% else %}Услуги{% endif %}</a></li>
+                    <li class="header__menu-item-3"><a href="{% url 'fleet' %}">{% if request.path == fleet %}
+                        <span>Наш авиапарк</span>{% else %}Наш авиапарк{% endif %}</a></li>
+                    <li class="header__menu-item-4"><a href="{% url 'card' %}">{% if request.path == card %}
+                        <span>О чартерах</span>{% else %}О чартерах{% endif %}</a></li>
+                    <li class="header__menu-item-5"><a data-fancybox data-src="#modal-booking"
+                                                       href="javascript:;">Бронирование</a></li>
+                    <li class="header__menu-item-6"><a href="{% url 'contacts' %}">{% if request.path == contacts %}
+                        <span>Контакты</span>{% else %}Контакты{% endif %}</a></li>
+                    <li class="header__menu-item-7"><a href="tel:88001301532">8 (800) 130-15-32</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="top">
+    <div {% block bg %}{% endblock bg %}>
+
+        <div class="container">
+            <div class="header-top__inner">
+                <div class="header-top__logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'images/logo.svg' %}" alt="Самолет"></a>
+                </div>
+                <nav class="header-top__menu">
+                    <div class="header-top__menu-btn">
+                        <div class="header-top__menu-row"></div>
+                        <div class="header-top__menu-row"></div>
+                        <div class="header-top__menu-row"></div>
+                    </div>
+                    <ul>
+                        <li class="header-top__menu-item-1"><a href="{% url 'about' %}">О компании</a></li>
+                        <li class="header-top__menu-item-2"><a href="{% url 'services' %}">Услуги</a></li>
+                        <li class="header-top__menu-item-3"><a href="{% url 'fleet' %}">Наш авиапарк</a></li>
+                        <li class="header-top__menu-item-4"><a href="#">О чартерах</a></li>
+                        <li class="header-top__menu-item-5"><a data-fancybox data-src="#modal-booking"
+                                                               href="javascript:;">Бронирование</a></li>
+                        <li class="header-top__menu-item-6"><a href="{% url 'contacts' %}">Контакты</a></li>
+                        <li class="header-top__menu-item-7"><a href="tel:88001301532">8 (800) 130-15-32</a></li>
+                    </ul>
+                </nav>
+            </div>
+            {% block top_inner %}
+
+            {% endblock top_inner %}
+        </div>
+    </div>
+</section>
+
+
+{% block content %}
+{% endblock content %}
+
+
+
+<section class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__logo">
+                <a href="{% url 'index' %}"><img src="{% static 'images/logo.svg' %}" alt="Самолет"></a>
+            </div>
+            <nav class="footer__menu">
+                <ul>
+                    <li class="footer__menu-item"><a href="{% url 'about' %}">О НАС</a></li>
+                    <li class="footer__menu-item"><a href="{% url 'fleet' %}">НАШ АВИАПАРК</a></li>
+                    <li class="footer__menu-item"><a href="{% url 'services' %}">УСЛУГИ</a></li>
+                    <li class="footer__menu-item"><a href="{% url 'contacts' %}">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+            <a class="footer__link call" data-fancybox data-src="#modal-call" href="javascript:;">Заказать
+                звонок</a>
+        </div>
+        <div class="footer__bottom-inner">
+            <div class="footer__bottom-link">
+                <p class="footer__bottom-link-politic"><a href="#">Политика конфиденциальности</a></p>
+                <p><a href="#">Пользовательское соглашение</a></p>
+            </div>
+            <ul class="footer__social">
+                <li><a href="https://www.instagram.com/"><img src="{% static 'images/instagram.svg' %}" alt=""></a></li>
+                <li><a href="https://ru-ru.facebook.com/"><img src="{% static 'images/facebook.svg' %}" alt=""></a></li>
+                <li><a href="https://www.youtube.com/"><img src="{% static 'images/youtube.svg' %}" alt=""></a>
+                </li>
+            </ul>
+            <div class="footer__connect">
+                <p><a href="tel:88001301532">8 (800) 130-15-32</a></p>
+                <p><a href="mailto:info@luxaviacompany.ru?subject=Вопрос по бронированию">info@luxaviacompany.ru</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-mobile">
+        <div class="footer__inner-mobile">
+            <div class="footer__logo">
+                <a href="/"><img src="{% static 'images/logo.svg' %}" alt="Самолет"></a>
+            </div>
+            <div class="footer__connect">
+                <p><a href="tel:88001301532">8 (800) 130-15-32</a></p>
+                <p><a href="mailto:info@luxaviacompany.ru?subject=Вопрос по бронированию">info@luxaviacompany.ru</a>
+                </p>
+            </div>
+
+        </div>
+        <a class="footer__link call" data-fancybox data-src="#modal-call" href="javascript:;">Заказать звонок</a>
+        <div class="footer__bottom-inner">
+            <nav class="footer__menu">
+                <ul>
+                    <li class="footer__menu-item"><a href="{% url 'about' %}">О НАС</a></li>
+                    <li class="footer__menu-item"><a href="{% url 'fleet' %}">НАШ АВИАПАРК</a></li>
+                    <li class="footer__menu-item"><a href="{% url 'services' %}">УСЛУГИ</a></li>
+                    <li class="footer__menu-item"><a href="{% url 'contacts' %}">КОНТАКТЫ</a></li>
+                </ul>
+                <div class="footer__bottom-link">
+                    <p class="footer__bottom-link-politic"><a href="#">Политика конфиденциальности</a></p>
+                    <p><a href="#">Пользовательское соглашение</a></p>
+                </div>
+                <ul class="footer__social">
+                    <li><a href="https://www.instagram.com/"><img src="{% static 'images/instagram.svg' %}" alt=""></a>
+                    </li>
+                    <li><a href="https://ru-ru.facebook.com/"><img src="{% static 'images/facebook.svg' %}" alt=""></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/"><img src="{% static 'images/youtube.svg' %}" alt=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<div id="modal-booking">
+    <div class="modal__wrapper">
+        <div class="modal__booking">
+            <div class="modal__form">
+                <div class="modal_form-title">Бронирование судна</div>
+                <form action="{% url 'thanks_booking' %}" method="post">
+                    {% csrf_token %}
+                    <div class="modal__form-row">
+                        <input name="where" type="text" placeholder="Куда">
+                        <input name="date" type="datetime-local" placeholder="Когда">
+                        <input name="quantity" type="number" placeholder="Количество пассажиров">
+                        <input name="name" type="text" placeholder="ФИО*" required>
+                        <input name="phone" type="tel" data-tel-input placeholder="Телефон*" maxlength="18" required>
+                    </div>
+                    <textarea name="comment" placeholder="Комментарий"></textarea>
+                    <button class="popup__link " type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal__img" style="background-image: url('{% static "images/booking.jpg" %}')" ;>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal-call">
+    <div class="modal__wrapper">
+        <div class="modal__booking modal__booking-call">
+            <div class="modal__form">
+                <div class="modal_form-title">Заявка на звонок</div>
+                <form action="{% url 'thanks_call' %}" method="post">
+                    {% csrf_token %}
+                    <div class="modal__form-row">
+                        <input name="name" type="text" placeholder="ФИО*" required>
+                        <input name="phone" type="tel" data-tel-input placeholder="Телефон*" maxlength="18" required>
+                    </div>
+                    <textarea name="comment" placeholder="Комментарий"></textarea>
+                    <button class="popup__link " type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal__img" style="background-image: url('{% static 'images/call.jpg' %}')" ;>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="{% static 'js/libs.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

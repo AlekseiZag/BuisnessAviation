@@ -1,0 +1,439 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block bg %}
+class="bg bg-fleet"
+{% endblock bg %}
+
+{% block top_inner %}
+    <div class="top__inner">
+        <h1 class="top__title">Наш авиапарк</h1>
+        <p class="top__text top__text-fleet">Все наши судна - комфортабельные надежные и безопасные
+            лайнеры лучших мировых производителей. Мы подберем воздушное судно, соответствующее Вашим
+            запросам и условиям перелета. Салон каждого лайнера оборудован техникой нового поколения,
+            средствами коммуникации, стильной мебелью. </p>
+    </div>
+{% endblock top_inner %}
+
+{% block content %}
+    <section class="fleet">
+        <div class="container">
+            <div class="fleet__filter">
+                <div class="fleet__filter-sort-all">
+                    <div class="fleet__filter-sort">
+                        <select name="Количество пассажиров" id="purpose">
+                            <option value="all">Цель поездки</option>
+                            <option value="private">частный перелет</option>
+                            <option value="charter">корпоративный чартер</option>
+                            <option value="transportation">авиаперевозки</option>
+                            <option value="ambulance">санавиация</option>
+                        </select>
+                    </div>
+                    <div class="fleet__filter-sort">
+                        <select name="" id="passengers">
+                            <option value="all">Количество пассажиров</option>
+                            <option value="all">Все судна</option>
+                            <option value="under-10">до 10</option>
+                            <option value="under-20">до 20</option>
+                            <option value="more">более</option>
+                        </select>
+                    </div>
+                    <div class="fleet__filter-sort">
+                        <select id="range" name="Расстояние" id="">
+                            <option value="all">Расстояние</option>
+                            <option value="all">Все судна</option>
+                            <option value="short-range" value="1">
+                                малое
+                            </option>
+                            <option value="medium-range" value="2">
+                                среднее
+                            </option>
+                            <option value="long-range" value="3">
+                                дальнее
+                            </option>
+                        </select>
+                    </div>
+                    <div class="fleet__filter-sort">
+                        <select name="" id="">
+                            <option value="-">Класс самолета</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="fleet__icons">
+                    <div class=" icon icon-large active">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="icon icon-list">
+                        <div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fleet__items">
+                <div class="fleet__item long-range under-20">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-1.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Bombardier Global 7000</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>13 520 км.</li>
+                            <li>956 км/ч</li>
+                            <li>19</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-20">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-2.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Embraer Legacy 500</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>5 556 км.</li>
+                            <li>1 004 км/ч</li>
+                            <li>12</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item long-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-3.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Learjet 45XR</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>9 752 км.</li>
+                            <li>804 км/ч</li>
+                            <li>8</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-4.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Pilatus PC-12</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>2 804 км.</li>
+                            <li>500 км/ч</li>
+                            <li>9</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item long-range under-20">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-5.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Falcon 7X</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>11 019 км.</li>
+                            <li>953 км/ч</li>
+                            <li>14</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-6.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Cessna Citation Ultra</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>3 058 км.</li>
+                            <li>741 км/ч</li>
+                            <li>7</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range more">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-7.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Airbus A318</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>5 700 км.</li>
+                            <li>871 км/ч</li>
+                            <li>132</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-8.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Gulfstream G150</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>6 034 км.</li>
+                            <li>796 км/ч</li>
+                            <li>8</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-9.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Honda HA-420 HondaJet</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>2 661 км.</li>
+                            <li>778 км/ч</li>
+                            <li>6</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-10.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Hawker 700</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>4 725 км.</li>
+                            <li>808 км/ч</li>
+                            <li>8</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-11.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Piaggio Avanti EVO</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>3 200 км.</li>
+                            <li>745 км/ч</li>
+                            <li>7</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item long-range under-20">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-12.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Challenger 650</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>7 408 км.</li>
+                            <li>850 км/ч</li>
+                            <li>11</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-13.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Beechcraft King Air 350i</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>3 345 км.</li>
+                            <li>578 км/ч</li>
+                            <li>9</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item long-range more">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-14.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Boeing BBJ 787</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>18 418 км.</li>
+                            <li>917 км/ч</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item short-range under-20 ambulance">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-15.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Sikorsky S92</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>999 км.</li>
+                            <li>280 км/ч</li>
+                            <li>19</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-16.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Beechcraft Premier 1A </a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>2 095 км.</li>
+                            <li>835 км/ч</li>
+                            <li>7</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-17.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Westwind II</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>4 430 км.</li>
+                            <li>868 км/ч</li>
+                            <li>10</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range under-10">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-18.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Eclipse 550</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>2 480 км.</li>
+                            <li>695 км/ч</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item short-range under-20 ambulance">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-19.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Leonardo Helicopters AW101</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>1 000 км.</li>
+                            <li>278 км/ч</li>
+                            <li>14</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet__item medium-range more">
+                    <a class="fleet__item-img" href={% url 'card' %}
+                       style="background-image: url({% static 'images/fleet/plane-20.png' %});"></a>
+                    <a href={% url 'card' %} class="fleet__item-title">Sukhoi Superjet 100</a>
+                    <div class="fleet__item-content">
+                        <ul class="fleet__item-characteristics">
+                            <li>Дальность полета:</li>
+                            <li>Скорость:</li>
+                            <li>Количество мест:</li>
+                        </ul>
+                        <ul class="fleet__item-values">
+                            <li>3 048 км.</li>
+                            <li>870 км/ч</li>
+                            <li>103</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+

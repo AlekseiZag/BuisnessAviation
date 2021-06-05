@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block bg %}
+class="bg bg-services"
+{% endblock bg %}
+
+{% block top_inner %}
+    <h1 class="top__title top__title-services">Услуги</h1>
+    <p class="services__top-text">
+        Наша компания предоставляет полный спектр услуг, связанных с частными авиаперевозками.
+        <br>
+        Наша задача — не просто организовать частный перелет, а помочь клиенту в решении конкретных проблем.
+        Вы можете заказать аренду самолета с особыми условиями — например, медицинским сопровождением
+        больного.
+        Мы организуем чартер в течение нескольких часов после подачи заявки.
+    </p>
+{% endblock top_inner %}
+{% block content %}
+    <section class="services">
+        <div class="container">
+            <div class="services__items">
+                <div class="services__item-left">
+                    <div class="img-wrap">
+                        <div class="services__item-left-top">
+                            <img src="{% static 'images/services/service-1.jpg' %}" alt="">
+                            <h6>Частный перелёт</h6>
+                        </div>
+                    </div>
+                    <div class="services__item-left-bottom">
+                        <div class="img-wrap">
+                            <img src="{% static 'images/services/service-2.jpg' %}" alt="">
+                            <h6>Корпоративные чартеры и групповые рейсы</h6>
+                        </div>
+                        <div class="img-wrap">
+                            <img src="{% static 'images/services/service-3.jpg' %}" alt="">
+                            <h6>Медицинская санитарная авиация</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__item-right">
+                    <div class="services__item-long">
+                        <div class="img-wrap">
+                            <img src="{% static 'images/services/service-4.jpg' %}" alt="">
+                            <h6>Купля-продажа самолетов</h6>
+                        </div>
+                    </div>
+                    <div class="services__item-short">
+                        <div class="img-wrap">
+                            <img src="{% static 'images/services/service-5.jpg' %}" alt="">
+                            <h6>Авиаперевозки</h6>
+                        </div>
+                        <div class="img-wrap">
+                            <img src="{% static 'images/services/service-6.jpg' %}" alt="">
+                            <h6>Дополнительные услуги</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

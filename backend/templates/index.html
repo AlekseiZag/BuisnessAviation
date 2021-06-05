@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block bg %}
+    id="bg"
+{% endblock bg %}
+
+{% block top_inner %}
+    <div class="top__inner">
+        <h1 class="top__title">Частные авиаперелеты из Санкт–Петербурга</h1>
+        <p class="top__text">в любую точку мира</p>
+        <a class="top__link call" data-fancybox data-src="#modal-booking"
+           href="javascript:;">Забронировать</a>
+    </div>
+
+{% endblock top_inner %}
+
+{% block content %}
+    <section class="lux">
+        <div class="container">
+            <div class="lux__item">
+                <div class="lux__item-content">
+                    <h3 class="lux__item-title">ЛюксАвиа</h3>
+                    <p class="lux__item-text">С 2000 года мы занимает одно из лидирующих мест в секторе частных
+                        авиаперелетов и обслуживания VIP клиентов.
+                    </p>
+                    <p class="lux__item-text">Наша цель – сделать Ваш перелет безупречным.</p>
+                    <a href={% url 'about' %}#" class="lux__item-link">Подробнее о компании</a>
+                </div>
+                <div class="lux__item-img">
+                    <img src="{% static 'images/lux-1.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="lux__item-img-bg">
+        </div>
+    </section>
+
+
+    <section class="park">
+        <div class="container">
+            <div class="park__top">
+                <div class="park__content">
+                    <h3 class="park__title">Наш авиапарк</h3>
+                    <div class="slider__park">
+                        <div class="slider__park-item">
+                            <h4 class="park__subtitle">Embraer Legacy 500</h4>
+                            <p class="park__text">Бизнес-джет Embraer Legacy 500 от бразильского производителя Embraer
+                                Executive Jets готов принять на борт от 8 до 10 пассажиров. </p>
+                        </div>
+                        <div class="slider__park-item">
+                            <h4 class="park__subtitle">Bombardier Global 7000</h4>
+                            <p class="park__text">ЭBombardier Global 7000 относится к
+                                сверхдальнемагистральным и высокоскоростным административным самолётам, разработанные
+                                канадской компанией Bombardier Aerospace.</p>
+                        </div>
+                        <div class="slider__park-item">
+                            <h4 class="park__subtitle">Learjet 45XR</h4>
+                            <p class="park__text">Салон самолета также не оставляет равнодушным. Круглый интерьер
+                                Bombardier Learjet 45XR был разработан специально, чтобы снабдить функциональность и
+                                комфорт при перелетах на дальние дистанции.</p>
+                        </div>
+                    </div>
+                    <a class="park__link call" data-fancybox data-src="#modal-booking"
+                       href="javascript:;">Забронировать</a>
+                </div>
+                <div class="slider">
+                    <div class="slider__inner">
+                        <div class="slider__item one">
+                            <img class="slider__item-img" src="{% static 'images/plane-1.svg' %}" alt="Самолет1">
+                        </div>
+                        <div class="slider__item two">
+                            <img class="slider__item-img" src="{% static 'images/plane22.svg' %}" alt="Самолет2">
+                        </div>
+                        <div class="slider__item three">
+                            <img class="slider__item-img" src="{% static 'images/plane-3.svg' %}" alt="Самолет3">
+                        </div>
+                    </div>
+                </div>
+                <a class="park__link-down call" data-fancybox data-src="#modal-booking"
+                   href="javascript:;">Забронировать</a>
+                <a class="park__small-link" href="{% url 'fleet' %}">Показать все судна</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="statistic">
+        <div class="container">
+            <div class="statistic__inner">
+                <div class="statistic__item">
+                    <div class="statistic__item-title">20</div>
+                    <p class="statistic__item-text">лет работы
+
+                    </p>
+                </div>
+                <div class="statistic__item">
+                    <div class="statistic__item-title">212</div>
+                    <p class="statistic__item-text">постоянных клиентов
+
+                    </p>
+                </div>
+                <div class="statistic__item">
+                    <div class="statistic__item-title">50</div>
+                    <p class="statistic__item-text">высококлассных <br> сотрудников
+
+                    </p>
+                </div>
+                <div class="statistic__item">
+                    <div class="statistic__item-title">93576</div>
+                    <p class="statistic__item-text statistic__item-text-flights">перелетов
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rent">
+        <div class="container">
+            <div class="rent__wrapper">
+                <div class="rent__title">Как арендовать самолет?</div>
+                <div class="rent__inner">
+                    <div class="rent__item">
+                        <div class="rent__icons"><img src="{% static 'images/rent-1.svg' %}" alt=""></div>
+                        <p class="rent__text">Оставить заявку на звонок от личного менеджера</p>
+                    </div>
+                    <div class="rent__item">
+                        <div class="rent__icons"><img src="{% static 'images/rent-2.svg' %}" alt=""></div>
+                        <p class="rent__text">Согласовать детали по рейсу</p>
+                    </div>
+                    <div class="rent__item">
+                        <div class="rent__icons"><img src="{% static 'images/rent-3.svg' %}" alt=""></div>
+                        <p class="rent__text">Оформить договор и оплатить</p>
+                    </div>
+                    <div class="rent__item">
+                        <div class="rent__icons"><img src="{% static 'images/rent-4.svg' %}" alt=""></div>
+                        <p class="rent__text">Отправиться в полет</p>
+                    </div>
+                </div>
+                <a class="rent__link call" data-fancybox data-src="#modal-call" href="javascript:;">Заказать звонок</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="services__content">
+                <h3 class="services__title">Наши услуги</h3>
+                <a href="{% url 'services' %}">Показать все услуги</a>
+            </div>
+            <div class="services__inner">
+                <div class="services__image services-image-1">
+                    <img src="{% static 'images/services-1.jpg' %}" alt="">
+                    <p class="services__paragraph-1">Частные перелеты из Санкт-Петербурга в любую точку мира со
+                        своим экипажем</p>
+                </div>
+                <div class="services__image services-image-2">
+                    <img src="{% static 'images/services-2.jpg' %}" alt="">
+                    <p class="services__paragraph-2">Купля-продажа самолетов</p>
+                </div>
+                <div class="services__image services-image-3">
+                    <img src="{% static 'images/services-3.jpg' %}" alt="">
+                    <p class="services__paragraph-3">Медицинская санитарная авиация</p>
+                </div>
+                <div class="services__image services-image-4">
+                    <img src="{% static 'images/services-4.jpg' %}" alt="">
+                    <p class="services__paragraph-4">Корпоративные чартеры</p>
+                </div>
+            </div>
+            <div class="down-link"><a href="#">Показать все услуги</a></div>
+        </div>
+    </section>
+
+
+    <section class="trust">
+        <div class="container">
+            <h3>Нам доверяют</h3>
+        </div>
+        <div class="container-2">
+            <div class="slider-2">
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-3.svg' %}" alt="">
+                        </div>
+                        Мегафон
+                    </div>
+                    <div class="slider-2__item-text">
+                        Благодарим ЛюксАвиа за хорошую работу! Летать с вами - хорошо, пилоты - настоящие профессионалы,
+                        сажают самолеты всегда безопасно. Никому из авиаперевозчиков больше не доверяю так, как вам. Вы
+                        большие молодцы!
+                    </div>
+                </div>
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-1.svg' %}" alt="">
+                        </div>
+                        Тинькофф банк
+                    </div>
+                    <div class="slider-2__item-text">
+                        Заказывали перелет в Сочи на конференцию в этой частной авиакомпании. Остались довольны, что
+                        обратились сюда: рейс был организован удобно по времени. Вылетели вовремя, долетели быстро, в
+                        полете никакого дискомфорта не испытали, обслуживание на борту было хорошим. Стоимость перелета
+                        получилась нормальной, обратно возвращались также на этом самолете.
+                    </div>
+                </div>
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-2.svg' %}" alt="">
+                        </div>
+                        BMW Advance
+                    </div>
+                    <div class="slider-2__item-text">
+                        В короткие сроки сотрудниками компании были предложены несколько вариантов бизнес джетов. Цена
+                        примерно сопоставима с конкурентами, но уровень обслуживание и быстрота реагирования нас приятно
+                        удивила. Рейс прошел отлично. От лица руководства нашей компании благодарим за четкую
+                        организацию перелета.
+                    </div>
+                </div>
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-3.svg' %}" alt="">
+                        </div>
+                        Мегафон
+                    </div>
+                    <div class="slider-2__item-text">
+                        Благодарим ЛюксАвиа за хорошую работу! Летать с вами - хорошо, пилоты - настоящие профессионалы,
+                        сажают самолеты всегда безопасно. Никому из авиаперевозчиков больше не доверяю так, как вам. Вы
+                        большие молодцы!
+                    </div>
+                </div>
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-1.svg' %}" alt="">
+                        </div>
+                        Тинькофф банк
+                    </div>
+                    <div class="slider-2__item-text">
+                        Заказывали перелет в Сочи на конференцию в этой частной авиакомпании. Остались довольны, что
+                        обратились сюда: рейс был организован удобно по времени. Вылетели вовремя, долетели быстро, в
+                        полете никакого дискомфорта не испытали, обслуживание на борту было хорошим. Стоимость перелета
+                        получилась нормальной, обратно возвращались также на этом самолете.
+                    </div>
+                </div>
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-2.svg' %}" alt="">
+                        </div>
+                        BMW Advance
+                    </div>
+                    <div class="slider-2__item-text">
+                        В короткие сроки сотрудниками компании были предложены несколько вариантов бизнес джетов. Цена
+                        примерно сопоставима с конкурентами, но уровень обслуживание и быстрота реагирования нас приятно
+                        удивила. Рейс прошел отлично. От лица руководства нашей компании благодарим за четкую
+                        организацию перелета.
+                    </div>
+                </div>
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-3.svg' %}" alt="">
+                        </div>
+                        Мегафон
+                    </div>
+                    <div class="slider-2__item-text">
+                        Благодарим ЛюксАвиа за хорошую работу! Летать с вами - хорошо, пилоты - настоящие профессионалы,
+                        сажают самолеты всегда безопасно. Никому из авиаперевозчиков больше не доверяю так, как вам. Вы
+                        большие молодцы!
+                    </div>
+                </div>
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-1.svg' %}" alt="">
+                        </div>
+                        Тинькофф банк
+                    </div>
+                    <div class="slider-2__item-text">
+                        Заказывали перелет в Сочи на конференцию в этой частной авиакомпании. Остались довольны, что
+                        обратились сюда: рейс был организован удобно по времени. Вылетели вовремя, долетели быстро, в
+                        полете никакого дискомфорта не испытали, обслуживание на борту было хорошим. Стоимость перелета
+                        получилась нормальной, обратно возвращались также на этом самолете.
+                    </div>
+                </div>
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-2.svg' %}" alt="">
+                        </div>
+                        BMW Advance
+                    </div>
+                    <div class="slider-2__item-text">
+                        В короткие сроки сотрудниками компании были предложены несколько вариантов бизнес джетов. Цена
+                        примерно сопоставима с конкурентами, но уровень обслуживание и быстрота реагирования нас приятно
+                        удивила. Рейс прошел отлично. От лица руководства нашей компании благодарим за четкую
+                        организацию перелета.
+                    </div>
+                </div>
+
+
+                <div class="slider-2__item">
+                    <div class="slider-2__item-title">
+                        <div class="slider-2__item-icons">
+                            <img src="{% static 'images/trust-1.svg' %}" alt="">
+                        </div>
+                        Тинькофф банк
+                    </div>
+                    <div class="slider-2__item-text">
+                        Заказывали перелет в Сочи на конференцию в этой частной авиакомпании. Остались довольны, что
+                        обратились сюда: рейс был организован удобно по времени. Вылетели вовремя, долетели быстро, в
+                        полете никакого дискомфорта не испытали, обслуживание на борту было хорошим. Стоимость перелета
+                        получилась нормальной, обратно возвращались также на этом самолете.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
